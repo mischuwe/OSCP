@@ -8,7 +8,7 @@ autorecon host<br/>
 example usage:
 `autorecon 10.11.1.209 --output /root/Desktop -vv`
 # Enumeration
-Enumartion of usernames 
+Enumartion of usernames<br/> 
 `nc 10.11.1.217 25
 [...]
 VRFY root
