@@ -1,5 +1,4 @@
 # OSCP
 All
 
-etstaest
-adsfasdfsafs
+# OSCP
