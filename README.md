@@ -12,9 +12,9 @@ example usage:
 ## FTP (21/tcp)
 * anonymous login
 ## SSH (22/tcp)
-public-key with weak crypto
+* public-key with weak crypto
 ## SMTP (25/tcp)
-Enumartion of usernames<br/> 
+* Enumartion of usernames<br/> 
 `nc 10.11.1.217 25
 [...]
 VRFY root
@@ -22,8 +22,8 @@ VRFY root
 VRFY idontexist
 550 5.1.1 <idontexist>: Recipient address rejected: User unknown in local recipient table`
 ## DNS (53/tcp)
-Extract information
-Zone transer
+* Extract information
+* Zone transer
 `dig axfr @$RHOST DOMAIN.COM
 dnsrecon -d DOMAIN.COM`
 ## RPC / NFS (111/tcp)
