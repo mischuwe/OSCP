@@ -26,10 +26,14 @@ VRFY idontexist
 ## DNS (53/tcp)
 * Extract information
 * Zone transer
-`dig axfr @$RHOST DOMAIN.COM<br/>
-dnsrecon -d DOMAIN.COM`
+```
+dig axfr @$RHOST DOMAIN.COM<br/>
+dnsrecon -d DOMAIN.COM
+```
 ## RPC / NFS (111/tcp)
+
 ## S(a)MB(a) (139/tcp and 445/tcp)
+* anonymous login
 ## SNMP (161/udp)
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 
