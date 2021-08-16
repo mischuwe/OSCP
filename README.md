@@ -10,7 +10,7 @@ example usage:
 # Enumeration
 
 ## FTP (21/tcp)
-anonymous login
+* anonymous login
 ## SSH (22/tcp)
 public-key with weak crypto
 ## SMTP (25/tcp)
