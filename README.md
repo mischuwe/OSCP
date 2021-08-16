@@ -1,7 +1,7 @@
 # OSCP
 All
 
-# Active_Information_Gathering/
+# Active_Information_Gathering
 ## autorecon.sh
 usage:
 autorecon host
