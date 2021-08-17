@@ -6,7 +6,7 @@ All
 usage:
 autorecon host<br/>
 example usage:
-`autorecon 10.11.1.209 --output /root/Desktop -vv`
+`autorecon --profile quick 10.11.1.209 --output /root/Desktop -vv`
 # Enumeration
 
 ## FTP (21/tcp)
