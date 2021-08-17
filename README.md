@@ -4,7 +4,7 @@ All
 # Active_Information_Gathering
 Make a scan over all ports.<br/>
 example:
-`nmap -p- 10.11.1.2`
+`nmap -p- 10.11.1.2 10.11.1.3 10.11.1.4 10.11.1.5 -o /root/Desktop/all_ports.txt`
 ## autorecon.sh
 example usage:
 `autorecon --profile quick 10.11.1.2 10.11.1.3 10.11.1.4 10.11.1.5 --output /root/Desktop -vv`
