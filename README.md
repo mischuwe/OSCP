@@ -4,7 +4,7 @@ All
 # Active_Information_Gathering
 General: <br/>
 Make a scan over all ports.<br/>
-example: <br/>
+example:
 `nmap -p- 10.11.1.2 1`
 ## autorecon.sh
 usage:
