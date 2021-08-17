@@ -5,7 +5,7 @@ All
 General: <br/>
 Make a scan over all ports.<br/>
 example:
-`nmap -p- 10.11.1.2 1`
+`nmap -p- 10.11.1.2`
 ## autorecon.sh
 usage:
 autorecon host<br/>
