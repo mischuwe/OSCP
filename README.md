@@ -2,13 +2,10 @@
 All
 
 # Active_Information_Gathering
-General: <br/>
 Make a scan over all ports.<br/>
 example:
 `nmap -p- 10.11.1.2`
 ## autorecon.sh
-usage:
-autorecon host<br/>
 example usage:
 `autorecon --profile quick 10.11.1.2 10.11.1.3 10.11.1.4 10.11.1.5 --output /root/Desktop -vv`
 # Enumeration
