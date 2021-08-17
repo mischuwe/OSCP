@@ -15,7 +15,7 @@ example usage:
 ## SSH (22/tcp)
 * public-key with weak crypto
 ## SMTP (25/tcp)
-* Enumartion of usernames<br/> 
+* Enumartion of usernames
 ```
 nc 10.11.1.217 25
 [...]
