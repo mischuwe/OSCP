@@ -48,7 +48,7 @@ dnsrecon -d DOMAIN.COM
   * manual examples:<br/>
  `nikto -ask=no -h http://10.11.1.2:8080 2>&1 | tee "/root/Desktop/tcp_8080_http_nikto.txt"`<br/><br/>
  `feroxbuster -u http://10.11.1.2:8080 -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /root/Desktop/tcp_8080_http_feroxbuster_big.txt`<br/><br/>
- `dirsearch -u http://10.11.1.2:8080/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/Desktop/tcp_8080_http_dirsearch_big.txt"`<br/><br/>
+ `dirsearch -u http://10.11.1.2:8080/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt -o=/root/Desktop/tcp_8080_http_dirsearch_big.txt`<br/><br/>
  `dirb http://10.11.1.2:8080/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/Desktop/tcp_8080_http_dirb_big.txt"`<br/><br/>
  `gobuster dir -u http://10.11.1.2:8080/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/Desktop/tcp_8080_http_gobuster_big.txt"`<br/><br/>
  `wpscan --url http://10.11.1.2:8080/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/root/Desktop/tcp_8080_http_wpscan.txt"`<br/><br/>
