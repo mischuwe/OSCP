@@ -12,7 +12,9 @@ example usage:
 
 ## FTP (21/tcp)
 * anonymous login
+* FTP vulnerable itself? searchsploit it.
 ## SSH (22/tcp)
+* old version of ssh
 * public-key with weak crypto
 ## SMTP (25/tcp)
 * Enumartion of usernames
