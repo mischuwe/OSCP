@@ -59,6 +59,9 @@ dnsrecon -d DOMAIN.COM
 
  
 * high degree of manual inspection
+* SSLScan
+example usage:
+
 * Burpsuite
 * Be
 
