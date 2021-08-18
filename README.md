@@ -45,7 +45,7 @@ dnsrecon -d DOMAIN.COM
 ## SNMP (161/udp)
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 * close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
- * manual examples:<br/>
+  * manual examples:<br/>
  `nikto -ask=no -h http://10.11.1.209:8080 2>&1 | tee "/root/Desktop/tcp_8080_http_nikto.txt"`<br/><br/>
  `feroxbuster -u http://10.11.1.209:8080 -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /root/Desktop/tcp_8080_http_feroxbuster_big.txt`<br/><br/>
  `dirsearch -u http://10.11.1.209:8080/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/Desktop/tcp_8080_http_dirsearch_big.txt"`<br/><br/>
