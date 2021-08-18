@@ -11,7 +11,8 @@ example usage:
 # Enumeration
 
 ## FTP (21/tcp)
-* anonymous login
+* anonymous login (anonymous anonymous)
+* Bruteforce login (done by autorecon.sh with hydra and medusa)
 * FTP vulnerable itself? searchsploit it.
 ## SSH (22/tcp)
 * old version of ssh
@@ -39,5 +40,10 @@ dnsrecon -d DOMAIN.COM
 * anonymous login
 ## SNMP (161/udp)
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
+* close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
+* high degree of manual inspection
+* Burpsuite
+* Be
+
 
 
