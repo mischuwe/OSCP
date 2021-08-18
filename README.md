@@ -46,14 +46,14 @@ dnsrecon -d DOMAIN.COM
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 * close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
  * manual examples:<br/>
- `nikto -ask=no -h http://10.11.1.209:8080 2>&1 | tee "/root/Desktop/10.11.1.209/scans/tcp_8080_http_nikto.txt"`<br/><br/>
- `feroxbuster -u http://10.11.1.209:8080 -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /root/Desktop/10.11.1.209/scans/tcp_8080_http_feroxbuster_big.txt`<br/><br/>
- `dirsearch -u http://10.11.1.209:8080/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/Desktop/10.11.1.209/scans/tcp_8080_http_dirsearch_big.txt"`<br/><br/>
- `dirb http://10.11.1.209:8080/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/Desktop/10.11.1.209/scans/tcp_8080_http_dirb_big.txt"`<br/><br/>
- `gobuster dir -u http://10.11.1.209:8080/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/Desktop/10.11.1.209/scans/tcp_8080_http_gobuster_big.txt"`<br/><br/>
- `wpscan --url http://10.11.1.209:8080/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/root/Desktop/10.11.1.209/scans/tcp_8080_http_wpscan.txt"`<br/><br/>
- `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 8080 -o "/root/Desktop/10.11.1.209/scans/tcp_8080_http_auth_hydra.txt" http-get://10.11.1.209/path/to/auth/area` <br/><br/>
- `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8080 -O "/root/Desktop/10.11.1.209/scans/tcp_8080_http_auth_medusa.txt" -M http -h 10.11.1.209 -m DIR:/path/to/auth/area`<br/><br/>
+ `nikto -ask=no -h http://10.11.1.209:8080 2>&1 | tee "/root/Desktop/tcp_8080_http_nikto.txt"`<br/><br/>
+ `feroxbuster -u http://10.11.1.209:8080 -t 10 -w /usr/share/seclists/Discovery/Web-Content/big.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /root/Desktop/tcp_8080_http_feroxbuster_big.txt`<br/><br/>
+ `dirsearch -u http://10.11.1.209:8080/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/Desktop/tcp_8080_http_dirsearch_big.txt"`<br/><br/>
+ `dirb http://10.11.1.209:8080/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/Desktop/tcp_8080_http_dirb_big.txt"`<br/><br/>
+ `gobuster dir -u http://10.11.1.209:8080/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/Desktop/tcp_8080_http_gobuster_big.txt"`<br/><br/>
+ `wpscan --url http://10.11.1.209:8080/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/root/Desktop/tcp_8080_http_wpscan.txt"`<br/><br/>
+ `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 8080 -o "/root/Desktop/tcp_8080_http_auth_hydra.txt" http-get://10.11.1.209/path/to/auth/area` <br/><br/>
+ `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 8080 -O "/root/Desktop/tcp_8080_http_auth_medusa.txt" -M http -h 10.11.1.209 -m DIR:/path/to/auth/area`<br/><br/>
 
  
 * high degree of manual inspection
