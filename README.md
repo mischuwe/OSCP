@@ -44,6 +44,10 @@ dig axfr @$RHOST DOMAIN.COM<br/>
 dnsrecon -d DOMAIN.COM
 ```
 ## RPC / NFS (111/tcp)
+* Enumerate (done by autorecon.sh with nmap)
+  * manual example:<br/>
+  `nmap -vv --reason -Pn -sV -p 111 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/Desktop/tcp_111_rpc_nmap.txt 10.11.1.2`<br/><br/>
+  
 
 ## S(a)MB(a) (139/tcp and 445/tcp)
 * anonymous login
