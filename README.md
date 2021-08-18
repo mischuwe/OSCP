@@ -47,7 +47,7 @@ dnsrecon -d DOMAIN.COM
 * Enumerate (done by autorecon.sh with nmap, rpcclient)
   * manual example:<br/>
   `nmap -vv --reason -Pn -sV -p 111 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/Desktop/tcp_111_rpc_nmap.txt 10.11.1.2`<br/><br/>
-  `rpcclient -p 111 -U "" 10.11.1.209`
+  `rpcclient -p 111 -U "" 10.11.1.2`
   
   
 
