@@ -73,6 +73,7 @@ dnsrecon -d DOMAIN.COM
   * Check for error pages  
   * Try some easy logins
   * Search web for standard logins
+  * Try or directory traversal
 * SSLScan<br/>
 example usage: `sslscan 10.11.1.2`
 
