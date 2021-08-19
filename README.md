@@ -70,6 +70,9 @@ dnsrecon -d DOMAIN.COM
 
  
 * high degree of manual inspection
+  * Check for error pages  
+  * Try some easy logins
+  * Search web for standard logins
 * SSLScan<br/>
 example usage: `sslscan 10.11.1.2`
 
