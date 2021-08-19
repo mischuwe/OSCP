@@ -77,7 +77,7 @@ dnsrecon -d DOMAIN.COM
 * SSLScan<br/>
 example usage: `sslscan 10.11.1.2`
 
-* Burpsuite
+* Burpsuite<br/>
   * Basic Authentication<br/>
   1. Intercept Request<br/>
   2. Send Request to Intruder<br/>
