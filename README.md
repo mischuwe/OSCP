@@ -74,10 +74,10 @@ dnsrecon -d DOMAIN.COM
 example usage: `sslscan 10.11.1.2`
 
 * Burpsuite
-  * Basic Authentication  (Authorization: Basic)
-  Intercept Request
-  Send Request to Intruder
-  Payload Positions -> Add two positions
+  * Basic Authentication  (Authorization: Basic)<br/>
+  Intercept Request<br/>
+  Send Request to Intruder<br/>
+  Payload Positions -> Add two positions<br/>
   Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
  
 
