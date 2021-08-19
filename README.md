@@ -74,7 +74,7 @@ dnsrecon -d DOMAIN.COM
 example usage: `sslscan 10.11.1.2`
 
 * Burpsuite
-  * Basic Authentication  (Authorization: Basic)<br/>
+  * Basic Authentication<br/>
   1. Intercept Request<br/>
   2. Send Request to Intruder<br/>
   3. Payload Positions -> Add two positions<br/>
