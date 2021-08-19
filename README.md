@@ -75,10 +75,10 @@ example usage: `sslscan 10.11.1.2`
 
 * Burpsuite
   * Basic Authentication  (Authorization: Basic)<br/>
-  Intercept Request<br/>
-  Send Request to Intruder<br/>
-  Payload Positions -> Add two positions<br/>
-  Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
+  1. Intercept Request<br/>
+  2. Send Request to Intruder<br/>
+  3. Payload Positions -> Add two positions<br/>
+  4. Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
  
 
 * Be
