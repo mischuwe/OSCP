@@ -40,7 +40,7 @@ VRFY idontexist
 * Extract information
 * Zone transer
 ```
-dig axfr @$RHOST DOMAIN.COM<br/>
+dig axfr @10.11.1.2 DOMAIN.COM<br/>
 dnsrecon -d DOMAIN.COM
 ```
 ## RPC / NFS (111/tcp)
