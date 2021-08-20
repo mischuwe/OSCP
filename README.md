@@ -50,12 +50,12 @@ dnsrecon -d DOMAIN.COM
   `nmap -vv --reason -Pn -sV -p 135 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/Desktop/tcp_111_rpc_nmap.txt 10.11.1.2`<br/><br/>
   `rpcclient -p 111 -U "" 10.11.1.2`
 ## S(a)MB(a) (139/tcp and 445/tcp)
-* anonymous login (anonymous anonymous)
+* anonymous login: `smbclient -N -L \\\\10.11.1.2 `
 * Enumerate (done by autorecon.sh with nmap)
   * manual example:<br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/Desktop/scans/tcp_139_smb_ms06-025.txt" 10.11.1.2`<br/><br/>
-	`nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms07-029.txt" 10.11.1.2`<br/><br/>
-	`nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms08-067.txt" 10.11.1.2`
+ `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms07-029.txt" 10.11.1.2`<br/><br/>
+ `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms08-067.txt" 10.11.1.2`
 ## SNMP (161/udp)
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 * close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
