@@ -9,7 +9,7 @@ example usage:
 `autorecon --profile quick 10.11.1.2 10.11.1.3 10.11.1.4 10.11.1.5 --output /root/Desktop -vv`
 # Enumeration
 ## FTP (21/tcp)
-* anonymous login (anonymous anonymous)
+* anonymous login: `ftp 10.11.1.2 21` (anonymous anonymous)
 * FTP vulnerable itself? searchsploit it.
 * Bruteforce login (done by autorecon.sh with hydra and medusa)
   * manual examples:<br/>
