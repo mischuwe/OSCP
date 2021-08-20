@@ -67,6 +67,7 @@ dnsrecon -d DOMAIN.COM
  ## ms-sql (1433/tcp)
 * Enumerate (done by autorecon.sh with nmap and sqsh)
   * manual example:<br/>
+ `nmap -vv --reason -Pn -sV -p 1433 "--script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=sa -oN /root/Desktop/tcp_1433_mssql_nmap.txt 10.11.1.2`<br/><br/>
  `sqsh -U <username> -P <password> -S 10.11.1.2:1433`<br/><br/>
  
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
