@@ -64,6 +64,11 @@ dnsrecon -d DOMAIN.COM
  `nmap -vv --reason -Pn -sV -p 389 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /root/Desktop/tcp_389_ldap_nmap.txt 10.11.1.2`<br/><br/>
  `ldapsearch -x -D "<username>" -w "<password>" -p 389 -h 10.11.1.2 -b "dc=example,dc=com" -s sub "(objectclass=*) 2>&1 | tee > "/root/Desktop/scans/tcp_389_ldap_all-entries.txt"`
  
+ ## ms-sql (1433/tcp)
+* Enumerate (done by autorecon.sh with nmap and sqsh)
+  * manual example:<br/>
+ `sqsh -U <username> -P <password> -S 10.11.1.2:1433`<br/><br/>
+ 
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 * close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
   * manual examples:<br/>
