@@ -85,7 +85,8 @@ example usage: `sslscan 10.11.1.2`
   4. Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
  
 
-* Be
+# Privilege escalation Linux
+
 
 
 
