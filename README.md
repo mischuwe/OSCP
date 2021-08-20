@@ -38,7 +38,7 @@ VRFY idontexist
 ```
 ## DNS (53/tcp)
 * Extract information
-* Zone transer
+* Zone transer (if Domain name is known)
 ```
 dig axfr @10.11.1.2 DOMAIN.COM<br/>
 dnsrecon -d DOMAIN.COM
