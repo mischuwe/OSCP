@@ -130,7 +130,7 @@ List installed applications: `dpkg -l`<br/>
 Drive informations: `cat /etc/fstab`, `mount`, `lsblk`  <br/>
 show loaded kernel modules: `lsmod`<br/>
 ## Automated enumeration:
-linpeas.sh from https://github.com/carlospolop/PEASS-ng/blob/master/linPEAS/linpeas.sh<br/>
+* linpeas.sh from https://github.com/carlospolop/PEASS-ng/blob/master/linPEAS/linpeas.sh<br/>
 
 ## SSH (22/tcp)
 * Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
