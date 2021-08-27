@@ -110,6 +110,26 @@ example usage: `sslscan 10.11.1.2`
 Spawn a better shell:
 `python -c 'import pty; pty.spawn("/bin/bash")`
 
+Manual enumeration:
+
+Get user context information:`id` <br/>
+Enumerate users: `cat /etc/passwd`<br/>
+Enumerate hostname: `hostname`<br/>
+OS Information: `cat /etc/issue`<br/>
+Kernel Information: `uname -r`, `uname -a`<br/>
+Return Linux processes: `ps -aux`<br/>
+Network routing tables: `route print`<br/>
+Show configuration of network adapters: `ip a`<br/>
+Show network routing tables: `/sbin/route`<br/>
+Display active network connections: `ss`<br/>
+View scheduled tasks: `ls -lah /etc/cron*`<br/>
+View created tasks: `cat /etc/crontab`<br/>
+List installed applications: `dpkg -l`<br/>
+Drive informations: `cat /etc/fstab`, `mount`, `lsblk`  <br/>
+show loaded kernel modules: `lsmod`<br/>
+
+
+
 
 
 
