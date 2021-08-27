@@ -132,8 +132,7 @@ show loaded kernel modules: `lsmod`<br/>
 ## SSH (22/tcp)
 * Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
 Fix path:<br/>
-`export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
+`export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
 Fix shell:<br/>
 `python -c 'import pty; pty.spawn("/bin/bash")' python -c 'import pty; pty.spawn("/bin/bash")'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
