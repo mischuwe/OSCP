@@ -51,7 +51,8 @@ dnsrecon -d DOMAIN.COM
   `rpcclient -p 111 -U "" 10.11.1.2`
 ## SMB (139/tcp and 445/tcp)
 * anonymous login: `smbclient -N -L \\\\10.11.1.2 `
-* List out files (if anonymous login is enabled):`smbmap -H 10.11.1.101 -R`<br/>
+* List out files (if anonymous login is enabled):`smbmap -H 10.11.1.2 -R`<br/>
+* Connect to share (if accessible):`smbclient //10.11.1.2/sharename$`<br/>
 * Enumerate (done by autorecon.sh with nmap)
   * manual example:<br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/Desktop/scans/tcp_139_smb_ms06-025.txt" 10.11.1.2`<br/><br/>
