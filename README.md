@@ -110,6 +110,7 @@ example usage: `sslscan 10.11.1.2`
 Spawn a better shell:
 `python -c 'import pty; pty.spawn("/bin/bash")`
 ## Manual enumeration:
+Look for commands, that can be run without  password:`sudo -l` <br/>
 Get user context information:`id` <br/>
 Enumerate users: `cat /etc/passwd`<br/>
 Enumerate hostname: `hostname`<br/>
