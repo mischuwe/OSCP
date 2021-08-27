@@ -109,7 +109,6 @@ example usage: `sslscan 10.11.1.2`
 # Privilege_Escalation_Linux
 Spawn a better shell:
 `python -c 'import pty; pty.spawn("/bin/bash")`
-
 ## Manual enumeration:
 Get user context information:`id` <br/>
 Enumerate users: `cat /etc/passwd`<br/>
