@@ -63,8 +63,7 @@ dnsrecon -d DOMAIN.COM
 `prompt OFF`<br/>
 `lcd /root/Desktop/smb/`<br/>
 `mget *`<br/>
-
-* find samba version:<br/>
+* Find samba version:<br/>
 Open Terminal1 `ngrep -i -d tun0 's.?a.?m.?b.?a.*[[:digit:]]' port 139`<br/>
 Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
 * Enumerate (done by autorecon.sh with nmap and enum4linux)
