@@ -63,12 +63,12 @@ dnsrecon -d DOMAIN.COM
 `prompt OFF`<br/>
 `lcd /root/Desktop/smb/`<br/>
 `mget *`<br/>
-* Enumerate (done by autorecon.sh with nmap)
+* Enumerate (done by autorecon.sh with nmap and enum4linux)
   * manual example:<br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/Desktop/scans/tcp_139_smb_ms06-025.txt" 10.11.1.2`<br/><br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms07-029.txt" 10.11.1.2`<br/><br/>
- `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms08-067.txt" 10.11.1.2`
-
+ `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms08-067.txt" 10.11.1.2`<br/><br/>
+ `enum4linux -USPo 10.11.1.2`
 ## SNMP (161/udp)
 
 ## ldap (389/tcp,636/tcp,3268/tcp,3296/tcp)
