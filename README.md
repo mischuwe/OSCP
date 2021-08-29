@@ -63,6 +63,10 @@ dnsrecon -d DOMAIN.COM
 `prompt OFF`<br/>
 `lcd /root/Desktop/smb/`<br/>
 `mget *`<br/>
+
+* find samba version:<br/>
+Open Terminal1 `ngrep -i -d tun0 's.?a.?m.?b.?a.*[[:digit:]]' port 139`<br/>
+Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
 * Enumerate (done by autorecon.sh with nmap and enum4linux)
   * manual example:<br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/Desktop/scans/tcp_139_smb_ms06-025.txt" 10.11.1.2`<br/><br/>
