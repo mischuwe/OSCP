@@ -114,9 +114,23 @@ example usage: `sslscan 10.11.1.2`
   4. Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
 ### Initial shell php
 p0wny-shell: try to upload p0wny-shell, try to detect, where it was uploaded.
+github.com/flozz/p0wny-shell
 # Privilege_Escalation_Windows
 ## Manual enumeration:
-blubber`<br/>
+`whoami`<br/>
+`net user <username>`<br/>
+`tasklist`<br/>
+`netstat -a`<br/>
+`systeminfo`<br/>
+`net config Workstation`<br/> 
+`net users`<br/>
+Has a Windows Auto-login Password been set?<br/> 
+`reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"`<br/> 
+Dump a tree of all the folders / files on the HDD<br/> 
+`tree c:\ > c:\users\public\folders.txt`<br/> 
+or for a list of files:<br/>
+`dir /s c:\ > c:\users\public\files.txt`<br/>
+
 ## Automated enumeration:
 
 
