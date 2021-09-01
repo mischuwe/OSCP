@@ -112,6 +112,8 @@ example usage: `sslscan 10.11.1.2`
   2. Send Request to Intruder<br/>
   3. Payload Positions -> Add two positions<br/>
   4. Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
+### Initial shell php
+p0wny-shell: try to upload p0wny-shell, try to detect, where it was uploaded.
 # Privilege_Escalation_Linux
 Spawn a better shell:
 `python -c 'import pty; pty.spawn("/bin/bash")`
