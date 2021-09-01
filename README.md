@@ -133,6 +133,7 @@ or for a list of files:<br/>
 
 ## Automated enumeration:
 ### WindownPrivEsc.exe
+`windows-privesc-check.exe --audit -a -o report`<br/>
 ### Sherlock
 ### Watson
 ### JAWZ
