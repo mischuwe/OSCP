@@ -114,6 +114,13 @@ example usage: `sslscan 10.11.1.2`
   4. Payloads -> Payload type: Custom iterator ¦ Separator for position 1: ':' ¦ Payload Processing: Base64-encode ¦ Payload Encoding: Delete '='
 ### Initial shell php
 p0wny-shell: try to upload p0wny-shell, try to detect, where it was uploaded.
+# Privilege_Escalation_Windows
+## Manual enumeration:
+blubber`<br/>
+## Automated enumeration:
+
+
+
 # Privilege_Escalation_Linux
 Spawn a better shell:
 `python -c 'import pty; pty.spawn("/bin/bash")`
