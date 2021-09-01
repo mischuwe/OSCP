@@ -126,10 +126,10 @@ github.com/flozz/p0wny-shell
 `net users`<br/>
 Has a Windows Auto-login Password been set?<br/> 
 `reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"`<br/> 
-Dump a tree of all the folders / files on the HDD<br/> 
-`tree c:\ > c:\users\public\folders.txt`<br/> 
+Tree of all the folders / files on the HDD<br/> 
+`tree c:\`<br/> 
 or for a list of files:<br/>
-`dir /s c:\ > c:\users\public\files.txt`<br/>
+`dir /s c:\`<br/>
 
 ## Automated enumeration:
 
