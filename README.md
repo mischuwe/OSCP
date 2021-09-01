@@ -132,6 +132,11 @@ or for a list of files:<br/>
 `dir /s c:\`<br/>
 
 ## Automated enumeration:
+### WindownPrivEsc.exe
+### Sherlock
+### Watson
+### JAWZ
+### Seatbelt
 
 
 
