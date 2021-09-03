@@ -138,6 +138,9 @@ or for a list of files:<br/>
 ### Watson
 ### JAWZ
 ### Seatbelt
+## Escalation
+### JuicyPotato.exe
+Check if "SeImpersonatePrivilege" is enabled: `whoami /priv`<br/>
 
 
 
