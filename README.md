@@ -135,7 +135,8 @@ or for a list of files:<br/>
 ### WindownPrivEsc.exe
 `windows-privesc-check.exe --audit -a -o report`<br/>
 ### Sherlock
-### Watson
+### Winpeas.bat (has Watson integrated)
+Just upload and run from a cmd. <br/>
 ### JAWZ
 ### Seatbelt
 ## Escalation
