@@ -194,16 +194,13 @@ Python server can't be started because port is in use (Address is already in use
 Testing-string for sql-injection: `'">*)asdf-${{<%[%'"}}%\` <br/>
 Problem with python-packages:<br/>
 Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
-1.<br/>
-Try spawn shell: `python -c 'import pty; pty.spawn("/bin/bash")'` <br/>
-2.<br/>
-Fix path:<br/>
+Fix PATH:<br/>
 `export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
-Spawn shell:<br/>
-`python -c 'import pty; pty.spawn("/bin/bash")'`<br/>
-Fix path:<br/>
+Try spawn shell: `python -c 'import pty; pty.spawn("/bin/bash")'` <br/>
+Fix PATH again (because its a new shell):<br/>
 `export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 /games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
+
 
 
 
