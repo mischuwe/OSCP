@@ -200,9 +200,9 @@ Try spawn shell: `python -c 'import pty; pty.spawn("/bin/bash")'` <br/>
 Fix path:<br/>
 `export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
 Spawn shell:<br/>
-`python -c 'import pty; pty.spawn("/bin/bash")'`
+`python -c 'import pty; pty.spawn("/bin/bash")'`<br/>
 Fix path:<br/>
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+`export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 /games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
 
 
