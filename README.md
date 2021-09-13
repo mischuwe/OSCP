@@ -1,5 +1,4 @@
 # OSCP
-* Use of autorecon.sh
 # Active_Information_Gathering
 Make a scan over all ports.<br/>
 example:
