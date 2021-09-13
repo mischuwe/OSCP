@@ -150,7 +150,7 @@ Check if "SeImpersonatePrivilege" is enabled: `whoami /priv`<br/>
 
 # Privilege_Escalation_Linux
 Spawn a better shell:
-`python -c 'import pty; pty.spawn("/bin/bash")`
+`python -c 'import pty; pty.spawn("/bin/bash")'`
 ## Manual enumeration:
 Look for commands, that can be run without  password:`sudo -l` <br/>
 Get user context information:`id` <br/>
