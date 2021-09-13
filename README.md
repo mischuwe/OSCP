@@ -193,8 +193,10 @@ Exploit mostly written in c.<br/>
 Python server can't be started because port is in use (Address is already in use): `lsof -i:80` and kill corresponding app.<br/>
 Testing-string for sql-injection: `'">*)asdf-${{<%[%'"}}%\` <br/>
 Problem with python-packages:<br/>
-* Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
-Fix path:<br/>
+Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
+1.Try spawn shell: `python -c 'import pty; pty.spawn("/bin/bash")' <br/>
+
+2.Fix path:<br/>
 `export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
 Spawn shell:<br/>
 `python -c 'import pty; pty.spawn("/bin/bash")' 
