@@ -198,8 +198,8 @@ Fix PATH:<br/>
 `export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
 Try spawn shell: `python -c 'import pty; pty.spawn("/bin/bash")'` <br/>
 Fix PATH again (because its a new shell):<br/>
-`export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"<br/>
-/games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
+`export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"`<br/>
+`/games"PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr`<br/>
 
 
 
