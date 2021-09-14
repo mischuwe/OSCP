@@ -196,7 +196,7 @@ Message "Address is already in use": `lsof -i:80` kill corresponding app.<br/>
 `'">*)asdf-${{<%[%'"}}%\` <br/>
 ## Problems python2 python3 
 Install pyenv: https://github.com/pyenv/pyenv <br/>
-Example:<br/>
+Example usage:<br/>
 * Install python 2.7.18
   `pyenv install 2.7.18`
 * open python 2.7.18 shell
