@@ -45,6 +45,20 @@ VRFY idontexist
 dig axfr @10.11.1.2 DOMAIN.COM<br/>
 dnsrecon -d DOMAIN.COM
 ```
+## POP3 (110/tcp)
+Brute force:<br/>
+`hydra -l <USER> -P <PASSWORDS_LIST> -f <IP> pop3 -V`<br/>
+`hydra -S -v -l <USER> -P <PASSWORDS_LIST> -s 995 -f <IP> pop3 -V`<br/>
+
+Read mail:
+
+`telnet <IP> 110
+USER <USER>
+PASS <PASSWORD>
+LIST
+RETR <MAIL_NUMBER>
+QUIT`
+
 ## RPC / NFS (111/tcp)
 * Enumerate (done by autorecon.sh with nmap, rpcclient)
   * manual example:<br/>
