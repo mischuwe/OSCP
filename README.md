@@ -88,6 +88,10 @@ Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
  `nmap -vv --reason -Pn -sV -p 1433 "--script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=sa -oN /root/Desktop/tcp_1433_mssql_nmap.txt 10.11.1.2`<br/><br/>
  `sqsh -U <username> -P <password> -S 10.11.1.2:1433`<br/><br/>
  
+## RDP (3389/tcp)
+* Guest login: `rdesktop -u guest -p guest 10.11.1.2`
+* Brute force: `ncrack -vv --user Administrator -P /path_to_password_list rdp://10.11.1.2`
+ 
 ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 * close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
   * manual examples:<br/>
