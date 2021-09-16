@@ -52,12 +52,12 @@ Brute force:<br/>
 
 Read mail:
 
-`telnet <IP> 110
-USER <USER>
-PASS <PASSWORD>
-LIST
-RETR <MAIL_NUMBER>
-QUIT`
+`telnet <IP> 110`<br/>
+`USER <USER>`<br/>
+`PASS <PASSWORD>`<br/>
+`LIST`<br/>
+`RETR <MAIL_NUMBER>`<br/>
+`QUIT`<br/>
 
 ## RPC / NFS (111/tcp)
 * Enumerate (done by autorecon.sh with nmap, rpcclient)
