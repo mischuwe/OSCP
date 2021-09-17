@@ -45,6 +45,10 @@ VRFY idontexist
 dig axfr @10.11.1.2 DOMAIN.COM<br/>
 dnsrecon -d DOMAIN.COM
 ```
+## TFTP (69/udp)
+* Gather information
+`nmap -sU -p 69 --script tftp-enum.nse --script-args tftp-enum.filelist=customlist.txt <host>`
+
 ## POP3 (110/tcp)
 Brute force:<br/>
 `hydra -l <USER> -P <PASSWORDS_LIST> -f <IP> pop3 -V`<br/>
