@@ -48,6 +48,8 @@ dnsrecon -d DOMAIN.COM
 ## TFTP (69/udp)
 * Gather information
 `nmap -sU -p 69 --script tftp-enum.nse --script-args tftp-enum.filelist=customlist.txt <host>`
+* Connect to tftp
+`tftp <host>`
 
 ## POP3 (110/tcp)
 Brute force:<br/>
