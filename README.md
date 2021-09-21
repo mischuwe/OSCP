@@ -77,6 +77,8 @@ Read mail:
   `nmap -vv --reason -Pn -sV -p 135 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/Desktop/tcp_111_rpc_nmap.txt <IP>`<br/><br/>
   `rpcclient -p 111 -U "" <IP>`
 ## SMB (139/tcp and 445/tcp)
+* null session to connect to a windows share: `smbclient -U '%' -N \\\\<IP>\\<SHARE>` 
+* authenticated session to connect to a windows share `smbclient -U '<USER>' \\\\<IP>\\<SHARE>`
 * anonymous login: `smbclient -N -L \\\\<IP>`
 * List out files (if anonymous login is enabled): `smbmap -H <IP> -R`<br/>
 * Connect to share (if accessible): `smbclient //<IP>/sharename$`<br/>
