@@ -24,7 +24,7 @@ example usage:
   * manual examples:<br/>
 `hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22 -o "/root/Desktop/tcp_22_ssh_hydra.txt" ssh://<IP>`<br/><br/>
 `medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22 -O "/root/Desktop/tcp_22_ssh_medusa.txt" -M ssh -h <IP>`
-* Login with known username: `ssh username@10.11.1.2`<br/>
+* Login with known username: `ssh username@<IP>`<br/>
 * Is there content? Look for ftp-access. <br/>
 * Error similar "...no matching key exchange method found...": add the following lines to /etc/ssh/ssh_config  <br/>
 KexAlgorithms diffie-hellman-group1-sha1,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1
@@ -32,7 +32,7 @@ KexAlgorithms diffie-hellman-group1-sha1,ecdh-sha2-nistp256,ecdh-sha2-nistp384,e
 ## SMTP (25/tcp)
 * Enumartion of usernames
 ```
-nc 10.11.1.217 25
+nc <IP> 25
 [...]
 VRFY root
 252 2.0.0 root
@@ -43,7 +43,7 @@ VRFY idontexist
 * Extract information
 * Zone transer (if Domain name is known)
 ```
-dig axfr @10.11.1.2 DOMAIN.COM<br/>
+dig axfr @<IP> DOMAIN.COM<br/>
 dnsrecon -d DOMAIN.COM
 ```
 ## TFTP (69/udp)
