@@ -94,7 +94,7 @@ Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/Desktop/scans/tcp_139_smb_ms06-025.txt" <IP>`<br/><br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms07-029.txt" <IP>`<br/><br/>
  `nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/Desktop/tcp_139_smb_ms08-067.txt" <IP>`<br/><br/>
- `enum4linux -a 10.11.1.2`
+ `enum4linux -a <IP>`
 ## SNMP (161/udp)
 `snmpbulkwalk -c <COMMUNITY_STRING> -v<VERSION> <IP>
 `snmp-check <IP>`<br/>
@@ -102,7 +102,7 @@ Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
 ## ldap (389/tcp,636/tcp,3268/tcp,3296/tcp)
 * Enumerate (done by autorecon.sh with nmap and ldapsearch)
   * manual example:<br/>
- `nmap -vv --reason -Pn -sV -p 389 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /root/Desktop/tcp_389_ldap_nmap.txt 10.11.1.2`<br/><br/>
+ `nmap -vv --reason -Pn -sV -p 389 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /root/Desktop/tcp_389_ldap_nmap.txt <IP>`<br/><br/>
  `ldapsearch -x -D "<username>" -w "<password>" -p 389 -h <IP> -b "dc=example,dc=com" -s sub "(objectclass=*) 2>&1 | tee > "/root/Desktop/scans/tcp_389_ldap_all-entries.txt"`
  
  ## ms-sql (1433/tcp)
