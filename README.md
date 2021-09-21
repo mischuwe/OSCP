@@ -79,7 +79,7 @@ Read mail:
 ## SMB (139/tcp and 445/tcp)
 * anonymous login: `smbclient -N -L \\\\<IP>`
 * List out files (if anonymous login is enabled): `smbmap -H <IP> -R`<br/>
-* Connect to share (if accessible): `smbclient //10.11.1.2/sharename$`<br/>
+* Connect to share (if accessible): `smbclient //<IP>/sharename$`<br/>
 * Download all folders recursivly:<br/>
 `mask ""`<br/>
 `recurse ON`<br/>
