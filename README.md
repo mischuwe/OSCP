@@ -29,7 +29,6 @@ example usage:
 * Is there content? Look for ftp-access. <br/>
 * Error similar "...no matching key exchange method found...": add the following lines to /etc/ssh/ssh_config  <br/>
 KexAlgorithms diffie-hellman-group1-sha1,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1
-
 ## SMTP (25/tcp)
 * Enumartion of usernames
 ```
@@ -52,21 +51,18 @@ dnsrecon -d DOMAIN.COM
 `nmap -sU -p 69 --script tftp-enum.nse --script-args tftp-enum.filelist=customlist.txt <host>`
 * Connect to tftp
 `tftp <host>`
-
 ## POP3 (110/tcp)
 Brute force:<br/>
 `hydra -l <USER> -P <PASSWORDS_LIST> -f <IP> pop3 -V`<br/>
 `hydra -S -v -l <USER> -P <PASSWORDS_LIST> -s 995 -f <IP> pop3 -V`<br/>
 
 Read mail:
-
 `telnet <IP> 110`<br/>
 `USER <USER>`<br/>
 `PASS <PASSWORD>`<br/>
 `LIST`<br/>
 `RETR <MAIL_NUMBER>`<br/>
 `QUIT`<br/>
-
 ## RPC / NFS (111/tcp)
 * Enumerate (done by autorecon.sh with nmap, rpcclient)
   * manual example:<br/>
@@ -101,14 +97,12 @@ Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
 ## SNMP (161/udp)
 `snmpbulkwalk -c <COMMUNITY_STRING> -v<VERSION> <IP>
 `snmp-check <IP>`<br/>
-
 ## ldap (389/tcp,636/tcp,3268/tcp,3296/tcp)
 * Enumerate (done by autorecon.sh with nmap and ldapsearch)
   * manual example:<br/>
  `nmap -vv --reason -Pn -sV -p 389 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /root/Desktop/tcp_389_ldap_nmap.txt <IP>`<br/><br/>
  `ldapsearch -x -D "<username>" -w "<password>" -p 389 -h <IP> -b "dc=example,dc=com" -s sub "(objectclass=*) 2>&1 | tee > "/root/Desktop/scans/tcp_389_ldap_all-entries.txt"`
- 
- ## ms-sql (1433/tcp)
+  ## ms-sql (1433/tcp)
 * Enumerate (done by autorecon.sh with nmap and sqsh)
   * manual example:<br/>
  `nmap -vv --reason -Pn -sV -p 1433 "--script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=sa -oN /root/Desktop/tcp_1433_mssql_nmap.txt <IP>`<br/><br/>
@@ -118,8 +112,7 @@ Brute force:<br/>
 ## RDP (3389/tcp)
 * Guest login: `rdesktop -u guest -p guest <IP>`
 * Brute force: `ncrack -vv --user Administrator -P /path_to_password_list rdp://<IP>`
- 
-## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
+ ## HTTP(S) (80/tcp, 443/tcp, 8000/tcp, 8080/tcp, 8443/tcp, …)
 * close enumeration (done by autorecon.sh with nikto, feroxbuster, dirsearch, dirb, gobuster, wpscan, hydra, medusa)
   * manual examples:<br/>
  `nikto -ask=no -h http://<IP>:8080 2>&1 | tee "/root/Desktop/tcp_8080_http_nikto.txt"`<br/><br/>
