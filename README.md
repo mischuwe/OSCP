@@ -85,6 +85,8 @@ Read mail:
 `prompt OFF`<br/>
 `lcd /root/Desktop/smb/`<br/>
 `mget *`<br/>
+* Upload file:<br/>
+`put <FILENAME>`<br/>
 * Find samba version:<br/>
 Open Terminal1 `ngrep -i -d tun0 's.?a.?m.?b.?a.*[[:digit:]]' port 139`<br/>
 Open Terminal2 ``echo exit | smbclient -L IP-ADDRESS``<br/>
